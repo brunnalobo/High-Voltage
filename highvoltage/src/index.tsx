@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HighAppBar from './HighAppBar';
 import HighSwiper from './HighSwiper';
+import HighCard from './HighCard';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,6 +13,7 @@ root.render(
   <React.StrictMode>
     <HighAppBar />
     <HighSwiper />
+    <HighCard />
   </React.StrictMode>
 );
 

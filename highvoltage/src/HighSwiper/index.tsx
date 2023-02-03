@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "./index.css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import viper from '../img/viper.png';
 import bandagem from '../img/bandagem.png';
 import pele from '../img/pele.png';
@@ -16,7 +18,14 @@ import maquininhakit from '../img/maquininhakit.png'
 export default function HighSwiper() {
   return (
     <>
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+      <Swiper 
+      cssMode={true}
+      navigation={true}
+      pagination={true}
+      mousewheel={true}
+      keyboard={true}
+      modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+       className="mySwiper">
         <SwiperSlide><img src={bandagem} className="App-logo" alt="logo" /></SwiperSlide>
         <SwiperSlide><img src={materialtattoo} className="App-logo" alt="logo" /></SwiperSlide>
         <SwiperSlide><img src={viper} className="App-logo" alt="logo" /></SwiperSlide>
